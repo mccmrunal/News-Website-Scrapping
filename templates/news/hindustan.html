@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/hindustan.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+  <body id="body">
+    <button type="button" class="btn btn-danger"><a href="/">CLICK HERE FOR BBC NEWS</a></button>
+    <br><br><br>
+
+        <div class="container">
+        {% for item in items2 %}
+
+         <div class="card text-white bg-dark mb-3" style="max-width: 100rem;">
+          <div class="card-header"><h3>{{ item.story }}</h3></div>
+          <div class="card-body">
+            <p class="card-text">{{ item.desc }}</p>
+            <img  class="img-rounded" src="{{ item.img }}" alt="">
+          </div>
+        </div>
+
+         {% endfor %}
+        </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+h1{
+  text-align: center;
+}
+{
+  text-align: center;
+}
+.jumbotron{
+  background-color: #56cfe1
+}
+#id{
+  border: solid;
+
+  border-width:  5px;
+  background-color: #14213d;
+}
+
+thead{
+  background-color: #e63946;
+  border: solid 5px;
+  border-bottom: 10px;
+}
+th{
+  text-align: center;
+}
+
+body{
+  background-color: #7400b8
+}
+
+a{
+  color: #fefae0
+}

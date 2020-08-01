@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+  </head>
+  <body>
+
+    <button type="button" class="btn btn-danger"><a href="/hindustantimes">CLICK HERE FOR Hindustan Times </a></button>
+
+    <div class="jumbotron">
+
+
+
+    <div class="container">
+
+
+        <table class="table table-dark">
+          <h1  class="display-4">BBC TOP HEADLINES</h1>
+          <thead>
+        <tr>
+          <th scope="col">NEWS</th>
+          <th scope="col">DESCRIPTION</th>
+          <th scope="col">Story Link</th>
+        </tr>
+        </thead>
+          {% for item in items %}
+          <tr id  = 'id'>
+              <td>{{ item.story }}</td>
+               <td>{{ item.desc }}</td>
+               <td><a target="_blank" href="{{ item.link }}">Click here</a></td>
+            </tr>
+
+          {% endfor %}
+        </table>
+            </div>
+          </div>
+
+
+  </body>
+</html>
